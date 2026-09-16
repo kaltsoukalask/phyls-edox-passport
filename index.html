@@ -118,8 +118,9 @@ body {
 #screen-home {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  padding-bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 .home-cover {
@@ -192,7 +193,7 @@ body {
 }
 
 .home-explore {
-  --explore-size: 1.2rem;
+  --explore-size: 1.05rem;
   flex: 1;
   min-height: 0;
   max-height: 340px;
@@ -221,7 +222,7 @@ body {
   font-family: "Cormorant Garamond", serif;
   font-style: italic;
   font-weight: 700;
-  font-size: calc(var(--explore-size) * 1.55);
+  font-size: calc(var(--explore-size) * 1.4);
   letter-spacing: 0.01em;
   color: var(--gold);
   text-align: center;
@@ -1337,7 +1338,7 @@ details[open] .acc-icon { transform: rotate(45deg); }
           var screen = document.getElementById('screen-home');
           var box = document.getElementById('home-explore');
           if (!screen || !box) return;
-          var size = 1.2, min = 0.68;
+          var size = 1.05, min = 0.68;
           box.style.setProperty('--explore-size', size + 'rem');
           var tries = 60;
           while (screen.scrollHeight > screen.clientHeight && size > min && tries-- > 0) {
