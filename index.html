@@ -104,7 +104,7 @@ body {
 }
 .env-from {
   position: absolute; left: 6%; bottom: 8%; z-index: 2;
-  font-size: clamp(0.42rem, 1.9vw, 0.62rem); letter-spacing: 0.14em; line-height: 1.7; text-transform: uppercase;
+  font-size: clamp(0.5rem, 2.4vw, 0.8rem); letter-spacing: 0.16em; line-height: 1.7; text-transform: uppercase;
 }
 .env-to {
   position: absolute; right: 7%; bottom: 8%; z-index: 2; text-align: left;
@@ -173,7 +173,6 @@ body {
     <div class="env">
       <div class="env-flap"></div>
       <div class="env-seal">23</div>
-      <div class="env-stamp">✦</div>
       <div class="env-from">
         <span class="env-k">From</span>
         <span class="env-name">Konstantinos Kaltsoukalas</span><br>Athens, Greece
@@ -197,7 +196,7 @@ body {
 (function () {
   var CODE = '150826';
   // Midnight 4 Nov 2026, Greece time (EET, UTC+2) = 22:00 UTC 3 Nov
-  var TARGET = Date.UTC(2026, 10, 3, 21, 55, 0);
+  var TARGET = Date.UTC(2026, 10, 3, 22, 0, 0);
   var params = new URLSearchParams(window.location.search);
   var preview = params.get('preview') === '1';
 
